@@ -1,0 +1,252 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Theme variables */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #1e88e5;
+  --secondary: #f0f0f0;
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --primary: #90caf9;
+  --secondary: #1f1f1f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--secondary);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Listings grid */
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  padding: 1rem;
+}
+
+.car-card {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 0.5rem;
+}
+
+.card-info h3 {
+  margin-bottom: .3rem;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: .5rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-bar input, .filter-bar select, .filter-bar button {
+  padding: .5rem;
+  font-size: 1rem;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  gap: 1rem;
+  width: 100%;
+  max-width: 360px;
+}
+.auth-form input {
+  padding: .75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.list-car-page {padding:2rem;display:flex;justify-content:center;}
+.list-car-form {background:var(--secondary);padding:2rem;border-radius:8px;display:flex;flex-direction:column;gap:1rem;width:100%;max-width:500px;}
+.list-car-form input, select, textarea {padding:.75rem;font-size:1rem;border:1px solid #ccc;border-radius:4px;}
+.list-car-form textarea {min-height:100px;resize:vertical;}
+
+/* About Page */
+.about-hero, .about-mission, .about-values, .about-footer-note {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-values ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+/* Contact Page */
+.contact-header, .contact-options {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
